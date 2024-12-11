@@ -40,7 +40,7 @@ function PureBlockActions({
             <CopyIcon size={18} />
           </Button>
         </TooltipTrigger>
-        <TooltipContent>Copy to clipboard</TooltipContent>
+        <TooltipContent>העתק</TooltipContent>
       </Tooltip>
       <Tooltip>
         <TooltipTrigger asChild>
@@ -55,7 +55,7 @@ function PureBlockActions({
             <UndoIcon size={18} />
           </Button>
         </TooltipTrigger>
-        <TooltipContent>View Previous version</TooltipContent>
+        <TooltipContent>הצג את גרסה קודמת</TooltipContent>
       </Tooltip>
       <Tooltip>
         <TooltipTrigger asChild>
@@ -70,28 +70,28 @@ function PureBlockActions({
             <RedoIcon size={18} />
           </Button>
         </TooltipTrigger>
-        <TooltipContent>View Next version</TooltipContent>
+        <TooltipContent>הצג את גרסה הבאה</TooltipContent>
       </Tooltip>
-      <Tooltip>
-        <TooltipTrigger asChild>
-          <Button
-            variant="outline"
-            className={cn(
-              'p-2 h-fit !pointer-events-auto dark:hover:bg-zinc-700',
-              {
-                'bg-muted': mode === 'diff',
-              },
-            )}
-            onClick={() => {
-              handleVersionChange('toggle');
-            }}
-            disabled={block.status === 'streaming' || currentVersionIndex === 0}
-          >
-            <DeltaIcon size={18} />
-          </Button>
-        </TooltipTrigger>
-        <TooltipContent>View changes</TooltipContent>
-      </Tooltip>
+      {/*<Tooltip>*/}
+      {/*  <TooltipTrigger asChild>*/}
+      {/*    <Button*/}
+      {/*      variant="outline"*/}
+      {/*      className={cn(*/}
+      {/*        'p-2 h-fit !pointer-events-auto dark:hover:bg-zinc-700',*/}
+      {/*        {*/}
+      {/*          'bg-muted': mode === 'diff',*/}
+      {/*        },*/}
+      {/*      )}*/}
+      {/*      onClick={() => {*/}
+      {/*        handleVersionChange('toggle');*/}
+      {/*      }}*/}
+      {/*      disabled={block.status === 'streaming' || currentVersionIndex === 0}*/}
+      {/*    >*/}
+      {/*      <DeltaIcon size={18} />*/}
+      {/*    </Button>*/}
+      {/*  </TooltipTrigger>*/}
+      {/*  <TooltipContent>View changes</TooltipContent>*/}
+      {/*</Tooltip>*/}
     </div>
   );
 }

@@ -195,7 +195,7 @@ function PureMultimodalInput({
 
       <input
         type="file"
-        className="fixed -top-4 -left-4 size-0.5 opacity-0 pointer-events-none"
+        className="fixed -top-4 -right-4 size-0.5 opacity-0 pointer-events-none"
         ref={fileInputRef}
         multiple
         onChange={handleFileChange}
@@ -203,7 +203,7 @@ function PureMultimodalInput({
       />
 
       {(attachments.length > 0 || uploadQueue.length > 0) && (
-        <div className="flex flex-row gap-2 overflow-x-scroll items-end">
+        <div className="flex flex-row gap-2 overflow-x-auto items-end">
           {attachments.map((attachment) => (
             <PreviewAttachment key={attachment.url} attachment={attachment} />
           ))}
@@ -224,7 +224,7 @@ function PureMultimodalInput({
 
       <Textarea
         ref={textareaRef}
-        placeholder="Send a message..."
+        placeholder="שלח הודעה..."
         value={input}
         onChange={handleInput}
         className={cx(

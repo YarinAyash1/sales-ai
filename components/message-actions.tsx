@@ -46,15 +46,15 @@ export function PureMessageActions({
               variant="outline"
               onClick={async () => {
                 await copyToClipboard(message.content as string);
-                toast.success('Copied to clipboard!');
+                toast.success('הועתק!');
               }}
             >
               <CopyIcon />
             </Button>
           </TooltipTrigger>
-          <TooltipContent>Copy</TooltipContent>
+          <TooltipContent>העתק</TooltipContent>
         </Tooltip>
-
+{/*
         <Tooltip>
           <TooltipTrigger asChild>
             <Button
@@ -161,7 +161,7 @@ export function PureMessageActions({
             </Button>
           </TooltipTrigger>
           <TooltipContent>Downvote Response</TooltipContent>
-        </Tooltip>
+        </Tooltip>*/}
       </div>
     </TooltipProvider>
   );

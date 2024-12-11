@@ -16,9 +16,9 @@ export const SignOutForm = () => {
     >
       <button
         type="submit"
-        className="w-full text-left px-1 py-0.5 text-red-500"
+        className="w-full text-right px-1 py-0.5 text-red-500"
       >
-        Sign out
+        התנתק/י
       </button>
     </Form>
   );

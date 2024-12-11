@@ -25,7 +25,7 @@ export function AppSidebar({ user }: { user: User | undefined }) {
   const { setOpenMobile } = useSidebar();
 
   return (
-    <Sidebar className="group-data-[side=left]:border-r-0">
+    <Sidebar className="group-data-[side=right]:border-r-0">
       <SidebarHeader>
         <SidebarMenu>
           <div className="flex flex-row justify-between items-center">
@@ -55,7 +55,7 @@ export function AppSidebar({ user }: { user: User | undefined }) {
                   <PlusIcon />
                 </Button>
               </TooltipTrigger>
-              <TooltipContent align="end">New Chat</TooltipContent>
+              <TooltipContent align="end">שיחה חדשה</TooltipContent>
             </Tooltip>
           </div>
         </SidebarMenu>

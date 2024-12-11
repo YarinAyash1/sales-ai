@@ -89,7 +89,7 @@ const PureChatItem = ({
             showOnHover={!isActive}
           >
             <MoreHorizontalIcon />
-            <span className="sr-only">More</span>
+            <span className="sr-only">עוד אפשרויות</span>
           </SidebarMenuAction>
         </DropdownMenuTrigger>
 
@@ -97,7 +97,7 @@ const PureChatItem = ({
           <DropdownMenuSub>
             <DropdownMenuSubTrigger className="cursor-pointer">
               <ShareIcon />
-              <span>Share</span>
+              <span>שיתוף</span>
             </DropdownMenuSubTrigger>
             <DropdownMenuPortal>
               <DropdownMenuSubContent>
@@ -109,7 +109,7 @@ const PureChatItem = ({
                 >
                   <div className="flex flex-row gap-2 items-center">
                     <LockIcon size={12} />
-                    <span>Private</span>
+                    <span>פרטי</span>
                   </div>
                   {visibilityType === 'private' ? (
                     <CheckCircleFillIcon />
@@ -123,7 +123,7 @@ const PureChatItem = ({
                 >
                   <div className="flex flex-row gap-2 items-center">
                     <GlobeIcon />
-                    <span>Public</span>
+                    <span>ציבורי</span>
                   </div>
                   {visibilityType === 'public' ? <CheckCircleFillIcon /> : null}
                 </DropdownMenuItem>
@@ -136,7 +136,7 @@ const PureChatItem = ({
             onSelect={() => onDelete(chat.id)}
           >
             <TrashIcon />
-            <span>Delete</span>
+            <span>מחיקה</span>
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
@@ -209,7 +209,7 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
     return (
       <SidebarGroup>
         <div className="px-2 py-1 text-xs text-sidebar-foreground/50">
-          Today
+          היום
         </div>
         <SidebarGroupContent>
           <div className="flex flex-col">
@@ -295,7 +295,7 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
                     {groupedChats.today.length > 0 && (
                       <>
                         <div className="px-2 py-1 text-xs text-sidebar-foreground/50">
-                          Today
+                          היום
                         </div>
                         {groupedChats.today.map((chat) => (
                           <ChatItem
@@ -315,7 +315,7 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
                     {groupedChats.yesterday.length > 0 && (
                       <>
                         <div className="px-2 py-1 text-xs text-sidebar-foreground/50 mt-6">
-                          Yesterday
+                          אתמול
                         </div>
                         {groupedChats.yesterday.map((chat) => (
                           <ChatItem
@@ -335,7 +335,7 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
                     {groupedChats.lastWeek.length > 0 && (
                       <>
                         <div className="px-2 py-1 text-xs text-sidebar-foreground/50 mt-6">
-                          Last 7 days
+                         לפני שבוע
                         </div>
                         {groupedChats.lastWeek.map((chat) => (
                           <ChatItem
@@ -355,7 +355,7 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
                     {groupedChats.lastMonth.length > 0 && (
                       <>
                         <div className="px-2 py-1 text-xs text-sidebar-foreground/50 mt-6">
-                          Last 30 days
+                            לפני חודש
                         </div>
                         {groupedChats.lastMonth.map((chat) => (
                           <ChatItem
@@ -375,7 +375,7 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
                     {groupedChats.older.length > 0 && (
                       <>
                         <div className="px-2 py-1 text-xs text-sidebar-foreground/50 mt-6">
-                          Older
+                            ישן
                         </div>
                         {groupedChats.older.map((chat) => (
                           <ChatItem
@@ -400,16 +400,18 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
       <AlertDialog open={showDeleteDialog} onOpenChange={setShowDeleteDialog}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+            <AlertDialogTitle>
+                    האם את/ה בטוח שאת/ה רוצה למחוק את השיחה?
+            </AlertDialogTitle>
             <AlertDialogDescription>
-              This action cannot be undone. This will permanently delete your
-              chat and remove it from our servers.
+                האם את/ה בטוח שאת/ה רוצה למחוק את השיחה?
+              הפעולה לא ניתנת לביטול וכל המידע יימחק לצמיתות.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogCancel>בטל</AlertDialogCancel>
             <AlertDialogAction onClick={handleDelete}>
-              Continue
+              המשך
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>

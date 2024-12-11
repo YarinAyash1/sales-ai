@@ -139,7 +139,7 @@ const Tool = ({
         </motion.div>
       </TooltipTrigger>
       <TooltipContent
-        side="left"
+        side="right"
         sideOffset={16}
         className="bg-foreground text-background rounded-2xl p-3 px-4"
       >
@@ -248,7 +248,7 @@ const ReadingLevelSelector = ({
             </motion.div>
           </TooltipTrigger>
           <TooltipContent
-            side="left"
+            side="right"
             sideOffset={16}
             className="bg-foreground text-background text-sm rounded-2xl p-3 px-4"
           >
